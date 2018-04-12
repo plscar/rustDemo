@@ -3,11 +3,11 @@
 use about_trait::mytrait::trait_demo;
 
 
-pub struct orange {
+pub struct Orange {
     pub o_type: String,
     pub o_market:String,
 }
-impl trait_demo for orange {
+impl trait_demo for Orange {
     fn show(&self)->String
     {
         println!("这是在另一个mod中实现strait_demo特性的结构体");
