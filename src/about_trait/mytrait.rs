@@ -1,3 +1,9 @@
+//在这个文件中，是关于trait的基础部分。
+//主要是三部分：
+//1.trait的声明
+//2.需要在结构体中实现的trait的方法体
+//3.无需在结构体中实现的trait默认方法
+use about_trait::custom;
 
 /// 声明一个特性(trait)
 /// 在接口里定义一个默认方法
@@ -71,6 +77,16 @@ pub fn main() {
     };
     GetShow_default(my_apple);
 }
-
+///调用custom模块(mod)中的orange
+pub fn GetOrange()
+{
+    
+    let ora=custom::orange{
+        o_type:"不知火".to_string(),
+        o_market:"沃尔玛".to_string(),
+    };
+    println!("\n以下为从一个模块中实现另一个模块的特性的demo");
+    GetShow_default(ora);
+}
 
 
